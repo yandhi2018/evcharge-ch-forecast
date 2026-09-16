@@ -2,4 +2,5 @@ requests
 SQLAlchemy
 psycopg2-binary
 PyYAML
+python-dotenv
 pytest
