@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets / local config
+.env
+config/config.yaml
+*password*
+*token*
+
+# Data
+data/raw/
+*.csv
+*.parquet
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
