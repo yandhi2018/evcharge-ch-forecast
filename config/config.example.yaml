@@ -1,0 +1,24 @@
+# Скопировать в config/config.yaml и заполнить при необходимости.
+
+sources:
+  evse_status:
+    url: "https://www.ich-tanke-strom.ch/api/status"  # уточнить точный endpoint OICP
+    poll_interval_minutes: 15
+
+  evse_data:
+    url: "https://www.ich-tanke-strom.ch/api/data"  # уточнить точный endpoint OICP
+    check_interval_hours: 24
+
+  weather:
+    provider: "open-meteo"
+    archive_base_url: "https://archive-api.open-meteo.com/v1/archive"
+    forecast_base_url: "https://api.open-meteo.com/v1/forecast"
+    hourly_variables:
+      - temperature_2m
+      - precipitation
+      - snowfall
+      - wind_speed_10m
+
+# Опорные точки погоды — административные центры 26 кантонов Швейцарии.
+# Заполняются координатами (lat, lon) на этапе реализации загрузчика погоды.
+canton_reference_points: {}
