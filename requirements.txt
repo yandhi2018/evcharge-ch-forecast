@@ -1,0 +1,5 @@
+requests
+SQLAlchemy
+psycopg2-binary
+PyYAML
+pytest
