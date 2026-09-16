@@ -1,0 +1,5 @@
+[
+  "tests/test_evse_status.py::test_current_slot_exact_boundary",
+  "tests/test_evse_status.py::test_current_slot_floors_to_15_minutes",
+  "tests/test_placeholder.py::test_placeholder"
+]
