@@ -1,0 +1,49 @@
+sources:
+  evse_status:
+    url: "https://data.geo.admin.ch/ch.bfe.ladestellen-elektromobilitaet/status/ch.bfe.ladestellen-elektromobilitaet.json"
+    poll_interval_minutes: 15
+
+  evse_data:
+    url: "https://data.geo.admin.ch/ch.bfe.ladestellen-elektromobilitaet/data/ch.bfe.ladestellen-elektromobilitaet.json"
+    check_interval_hours: 24
+
+  weather:
+    provider: "open-meteo"
+    archive_base_url: "https://archive-api.open-meteo.com/v1/archive"
+    forecast_base_url: "https://api.open-meteo.com/v1/forecast"
+    hourly_variables:
+      - temperature_2m
+      - precipitation
+      - snowfall
+      - wind_speed_10m
+    publication_delay_days: 3
+    backfill_start_date: "2026-07-16"
+
+# Опорные точки погоды — административные центры 26 кантонов Швейцарии.
+canton_reference_points:
+  ZH: { name: "Zürich",      lat: 47.3769, lon: 8.5417 }
+  BE: { name: "Bern",        lat: 46.9480, lon: 7.4474 }
+  LU: { name: "Luzern",      lat: 47.0502, lon: 8.3093 }
+  UR: { name: "Altdorf",     lat: 46.8802, lon: 8.6437 }
+  SZ: { name: "Schwyz",      lat: 47.0207, lon: 8.6524 }
+  OW: { name: "Sarnen",      lat: 46.8965, lon: 8.2458 }
+  NW: { name: "Stans",       lat: 46.9581, lon: 8.3654 }
+  GL: { name: "Glarus",      lat: 47.0404, lon: 9.0680 }
+  ZG: { name: "Zug",         lat: 47.1662, lon: 8.5155 }
+  FR: { name: "Fribourg",    lat: 46.8065, lon: 7.1619 }
+  SO: { name: "Solothurn",   lat: 47.2088, lon: 7.5323 }
+  BS: { name: "Basel",       lat: 47.5596, lon: 7.5886 }
+  BL: { name: "Liestal",     lat: 47.4838, lon: 7.7357 }
+  SH: { name: "Schaffhausen",lat: 47.6970, lon: 8.6349 }
+  AR: { name: "Herisau",     lat: 47.3854, lon: 9.2792 }
+  AI: { name: "Appenzell",   lat: 47.3311, lon: 9.4090 }
+  SG: { name: "St. Gallen",  lat: 47.4245, lon: 9.3767 }
+  GR: { name: "Chur",        lat: 46.8499, lon: 9.5330 }
+  AG: { name: "Aarau",       lat: 47.3925, lon: 8.0442 }
+  TG: { name: "Frauenfeld",  lat: 47.5590, lon: 8.8992 }
+  TI: { name: "Bellinzona",  lat: 46.1944, lon: 9.0175 }
+  VD: { name: "Lausanne",    lat: 46.5197, lon: 6.6323 }
+  VS: { name: "Sion",        lat: 46.2331, lon: 7.3606 }
+  NE: { name: "Neuchâtel",   lat: 46.9900, lon: 6.9293 }
+  GE: { name: "Genève",      lat: 46.2044, lon: 6.1432 }
+  JU: { name: "Delémont",    lat: 47.3659, lon: 7.3459 }
