@@ -3,10 +3,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
 
 # Secrets / local config
 .env
-config/config.yaml
 *password*
 *token*
 
